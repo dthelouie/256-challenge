@@ -22,4 +22,7 @@
   float: left;
   border-radius: 3px;
   background: rgba(238, 228, 218, 0.35);
+  font-size: 3em;
+  font-family: sans-serif;
+  text-align: center;
 }

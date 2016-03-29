@@ -9,6 +9,8 @@ function Game(string){
     boardArr.push(fullArr.slice(i, i+this.boardSize));
   }
   this.board = boardArr
+  this.spawn()
+  this.spawn()
 }
 
 Game.prototype.spawn = function(){
@@ -88,7 +90,7 @@ Game.prototype.move = function(){
 
 Game.prototype.output = function(){
   for (var i = 0; i < this.board.length; i++){
-    console.log(this.board[i].join(''));
+    console.log(this.board[i].join(' '));
   }
 }
 
