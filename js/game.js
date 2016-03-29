@@ -27,10 +27,10 @@ Game.prototype.spawn = function(){
   }
   if (this.board[coordinates[0]][coordinates[1]] == 0){
     this.board[coordinates[0]][coordinates[1]] = rand_num;
-  } else if (this.movable == true){
+  } else if (this.movable() == true){
     return true
-  } else if (this.movable == false){
-    this.movable
+  } else if (this.movable() == false){
+    this.movable()
   } else {
     this.spawn();
   }

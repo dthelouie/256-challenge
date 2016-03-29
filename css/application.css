@@ -1,24 +1,24 @@
-.game-container {
+#game-container {
   margin-top: 40px;
   position: relative;
   padding: 15px;
   cursor: default;
   background: #bbada0;
   border-radius: 6px;
-  width: 500px;
-  height: 500px;
+  width: 575px;
+  height: 575px;
   box-sizing: border-box;
   -webkit-user-select: none;
   touch-action: none;
 }
-.row {
+/*.row {
   margin-bottom: 15px;
-}
+}*/
 
 .cell {
   height: 106px;
   width: 106px;
-  margin-right: 15px;
+  margin: 15px;
   float: left;
   border-radius: 3px;
   background: rgba(238, 228, 218, 0.35);
