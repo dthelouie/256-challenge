@@ -9,6 +9,8 @@ function Game(string){
     boardArr.push(fullArr.slice(i, i+this.boardSize));
   }
   this.board = boardArr
+  this.spawn()
+  this.spawn()
 }
 
 Game.prototype.spawn = function(){
@@ -27,10 +29,10 @@ Game.prototype.spawn = function(){
   }
   if (this.board[coordinates[0]][coordinates[1]] == 0){
     this.board[coordinates[0]][coordinates[1]] = rand_num;
-  } else if (this.movable == true){
+  } else if (this.movable() == true){
     return true
-  } else if (this.movable == false){
-    this.movable
+  } else if (this.movable() == false){
+    this.movable()
   } else {
     this.spawn();
   }
@@ -88,7 +90,7 @@ Game.prototype.move = function(){
 
 Game.prototype.output = function(){
   for (var i = 0; i < this.board.length; i++){
-    console.log(this.board[i].join(''));
+    console.log(this.board[i].join(' '));
   }
 }
 
@@ -104,6 +106,5 @@ Game.prototype.movable = function(){
       }
     }
   };
-  console.log('game over!')
   return false;
 }
