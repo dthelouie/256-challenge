@@ -106,6 +106,5 @@ Game.prototype.movable = function(){
       }
     }
   };
-  console.log('game over!')
   return false;
 }
